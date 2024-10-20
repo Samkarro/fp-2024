@@ -6,12 +6,12 @@ import Control.Concurrent.STM (TVar)
 import Control.Monad.STM
 import Control.Concurrent.STM.TVar (readTVar, readTVarIO)
 import Control.Concurrent.STM (writeTVar)
-import Control.Concurrent.Async
+--import Control.Concurrent.Async
 import Control.Monad (when)
 import Control.Concurrent.STM (newTVarIO)
 import Control.Concurrent.STM (modifyTVar)
 
-
+-- >>>action "event"
 action :: String -> IO ()
 action name = do
     i <- randomIO :: IO Int
@@ -54,14 +54,14 @@ action'' name = do
     threadDelay sleep
     return $ "Slept for " ++ show sleep ++ " microseconds in " ++ name
 
-asyncExample :: IO ()
-asyncExample = do
-    c1 <- async $ action'' "one"
-    c2 <- async $ action'' "two"
-    v1 <- wait c1
-    v2 <- wait c2
-    putStrLn $ v1 ++ " " ++ v2
-    return ()
+-- asyncExample :: IO ()
+-- asyncExample = do
+--    c1 <- async $ action'' "one"
+--    c2 <- async $ action'' "two"
+--    v1 <- wait c1
+--    v2 <- wait c2
+--    putStrLn $ v1 ++ " " ++ v2
+--    return ()
 
 transfer :: TVar Integer -> TVar Integer -> Integer -> STM ()
 transfer accA accB amount = do
