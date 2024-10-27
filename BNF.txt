@@ -1,7 +1,5 @@
 <single> ::= 1#<artist> " - " <track-collection>
     <ep> ::= 1#<artist> " - " <ep-name> | <ep-name> ": " <track-collection>
-    <ab> ::= 2<single> <ab-name> | <ab-name> ": " <track-collection>
-    <lp> ::= 1#<artist> " - " <lp-name> | <lp-name> ": " <track-collection>
 <artist> ::= <alias> | <alias> ", " <artist>
 
 <track-collection> ::= <track-name> | <track-name> ", " <track-collection>

@@ -1,0 +1,3 @@
+show (EP ["A1","A2"] "EPname" [(Single ["A1","A2"] "rahhh"), (Single ["A1","A2"] "rahhh2")])
+show (Album ["Samkarro","GreatZura"] "Sisyphean Levels of Suffering" [(Single ["Samkarro","GreatZura"] "Functions"), (Single ["Samkarro","GreatZura"] "In Parallel"), (Single ["Samkarro","GreatZura"] "Am yvelafris dedassheveci davighalet"), (Single ["Samkarro","GreatZura"] "This entire album is one sick joke")])
+show (Single ["Similar Outskirts", "Samkarro", "So Juice", "Jon Hopkins"] "The Cross-Genre Collaboration Nobody Asked For")

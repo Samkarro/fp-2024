@@ -15,8 +15,8 @@ unitTests :: TestTree
 unitTests = testGroup "Lib1 tests"
   [ testCase "List of completions is not empty" $
       null Lib1.completions @?= False,
-    testCase "Parsing case 1 - give a better name" $
-      Lib2.parseQuery "" @?= (Left "Some error message"),
-    testCase "Parsing case 2 - give a better name" $
-      Lib2.parseQuery "o" @?= (Left "Some error message")
+    testCase "Query should throw error if empty" $
+      Lib2.parseQuery "" @?= (Left "Input cannot be empty"),
+    testCase "Query should throw error if input is less than 2 characters" $
+      Lib2.parseQuery "o" @?= (Left "Input must be at least 2 characters long")
   ]
